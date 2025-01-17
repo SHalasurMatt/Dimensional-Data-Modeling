@@ -15,20 +15,20 @@
 -- is_active: A BOOLEAN field that indicates whether an actor is currently active in the film industry (i.e., making films this year).
 
 CREATE TYPE films as (
-film text,
-votes integer,
-rating real,
-filmid text
+    film text,
+    votes integer,
+    rating real,
+    filmid text
 );
 
 CREATE TYPE quality_class AS ENUM ('star','good','average','bad');
 
 CREATE TABLE public.actors (
- actor text,
- actorid text,
- films films[],
- quality_class quality_class,
- is_active bool,
- current_year integer,
- PRIMARY KEY ( actorid, current_year)
+     actor text,
+     actorid text,
+     films films[],
+     quality_class quality_class,
+     is_active bool,
+     current_year integer,
+     PRIMARY KEY ( actorid, current_year)
 );
