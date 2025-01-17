@@ -1,3 +1,5 @@
+--Backfill query that can populate the entire actors_history_scd table in a single query
+
 insert into actors_history_scd(
           actor, 
           quality_class, 
